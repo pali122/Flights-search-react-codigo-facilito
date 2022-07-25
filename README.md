@@ -1,33 +1,33 @@
-
 ## Buscador de vuelos
-___
-### Proyecto realizado con react y vite como bundler.
 
+---
+
+### Proyecto realizado con react y vite como bundler.
 
 ## Dependencias
 
 Librerías de react:
 
-+ Formik
-+ React router
+- Formik
+- React router
 
-+ dayjs
-+ three js ( para mostrar el mapa y agregar marcadores con los destinos )
-+ yup
-+ material-ui
+- dayjs
+- three js ( para mostrar el mapa y agregar marcadores con los destinos )
+- yup
+- material-ui
   - Date pickers
-   - Icons
+  - Icons
 
 ## Instalación
 
 `Importante`
 
 Agregar archivo `.env`
+Registrarse en `Amadeus` [link text](https://developers.amadeus.com/) para generar las keys
 
     // .env
     VITE_AMADEUS_CLIENT_ID = 'YOUR_CLIENT_ID'
     VITE_AMADEUS_CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
-
 
 Luego simplemente instalar dependendias ( vite, npm )
 
