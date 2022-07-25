@@ -253,7 +253,7 @@ const SegmentsTable = () => {
         <h2 className="text-center padding-bottom-1">Itinerarios</h2>
         <h3>Duración total: {formatTime(it[0].duration)} </h3>
         <Divider className="divider" />
-        <div className="flight-table text-center">{tableItems}</div>
+        <div className=" text-center">{tableItems}</div>
       </div>
       <div>
         <Button
