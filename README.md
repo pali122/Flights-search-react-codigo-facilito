@@ -23,7 +23,7 @@ Librerías de react:
 `Importante`
 
 Agregar archivo `.env`
-Registrarse en `Amadeus` [link text](https://developers.amadeus.com/) para generar las keys
+Registrarse en `Amadeus` [Amadeus](https://developers.amadeus.com/) para generar las keys
 
     // .env
     VITE_AMADEUS_CLIENT_ID = 'YOUR_CLIENT_ID'
@@ -33,7 +33,7 @@ Luego simplemente instalar dependendias ( vite, npm )
 
 ## Peview
 
-[link text](https://flights-search-react-codigo-facilito-d35xndne2-pali122.vercel.app/)
+[Preview sitio](https://flights-search-react-codigo-facilito-d35xndne2-pali122.vercel.app/)
 
 ## Imagenes
 
