@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import IndexForm from "./components/MainForm/IndexForm";
 import PageNotFound from "./utility_components/NotFoundPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import "./index.css";
 import FlightsTable from "./components/FlightsPage/FlightsTable";
 import SegmentsTable from "./components/ReviewFlight/SegmentsTable";
 import initializeThree from "./assets/treejs";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const propsTree = initializeThree();
 console.log(propsTree);
