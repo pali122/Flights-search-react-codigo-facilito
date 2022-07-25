@@ -14,6 +14,8 @@ function TypeSelect(props) {
     form.setFieldValue(field.name, event.target.value);
   };
 
+  const n = 8; // Or something else
+
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label">{label}</InputLabel>
@@ -24,10 +26,9 @@ function TypeSelect(props) {
         label={label}
         onChange={handleChange}
       >
-        <MenuItem value={0}>0</MenuItem>
-        <MenuItem value={1}>1</MenuItem>
-        <MenuItem value={2}>2</MenuItem>
-        <MenuItem value={3}>3</MenuItem>
+        {[...Array(n)].map((e, i) => (
+          <MenuItem value={i}>{i}</MenuItem>
+        ))}
       </Select>
     </FormControl>
   );

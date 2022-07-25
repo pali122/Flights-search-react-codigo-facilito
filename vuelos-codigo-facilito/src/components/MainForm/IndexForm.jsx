@@ -6,7 +6,7 @@ import DatePicker from "../SharedComponents/DatePicker";
 import TypeSelect from "../SharedComponents/TypeSelect";
 import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
-
+import * as Yup from "yup";
 // const url = `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2022-11-01&adults=1&nonStop=false&max=250`;
 import airports from "../../assets/airports";
 import { useContext, useEffect } from "react";
@@ -37,6 +37,11 @@ const getAuthData = async (dispatch) => {
   }
 };
 
+const FormSchema = Yup.object().shape({
+  from: Yup.object().required("Required"),
+  to: Yup.object().required("Required"),
+});
+
 const IndexForm = ({ propsTree }) => {
   const navigate = useNavigate();
   const [store, dispatch] = useContext(StoreContext);
@@ -46,8 +51,8 @@ const IndexForm = ({ propsTree }) => {
   let initValues;
   if (!store.searchedData) {
     initValues = {
-      from: null,
-      to: null,
+      from: undefined,
+      to: undefined,
       dateFrom: dayjs(),
       dateTill: null,
       nChildren: 0,
@@ -67,13 +72,13 @@ const IndexForm = ({ propsTree }) => {
     <div className="page-transition">
       <Formik
         initialValues={initValues}
+        validationSchema={FormSchema}
         onSubmit={async (values) => {
           //   await new Promise((r) => setTimeout(r, 500));
           // alert(JSON.stringify(values, null, 2));
           dispatch({ type: types.data, payload: values });
           let dateF = values.dateFrom;
           let dateT = values.dateTill;
-
           dateF = dateF.format("YYYY-MM-DD");
           if (dateT) {
             dateT = dateT.format("YYYY-MM-DD");
@@ -83,7 +88,7 @@ const IndexForm = ({ propsTree }) => {
           );
         }}
       >
-        {({ errors, setFieldValue, values }) => (
+        {({ errors, setFieldValue, values, touched }) => (
           <Form>
             <div className="wrapper">
               <div>
@@ -106,6 +111,11 @@ const IndexForm = ({ propsTree }) => {
                     <TextField name="from" {...params} label="Origen" />
                   )}
                 />
+                {errors.from && touched.from ? (
+                  <div className="text-center padding-top font-red">
+                    {errors.from}
+                  </div>
+                ) : null}
               </div>
               <div>
                 <Autocomplete
@@ -126,6 +136,11 @@ const IndexForm = ({ propsTree }) => {
                     <TextField name="to" {...params} label="Destino" />
                   )}
                 />
+                {errors.to && touched.to ? (
+                  <div className="text-center padding-top font-red">
+                    {errors.from}
+                  </div>
+                ) : null}
               </div>
               <div>
                 <Field

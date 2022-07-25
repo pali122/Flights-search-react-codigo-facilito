@@ -120,6 +120,7 @@
   max-height: 70vh;
   overflow-x: auto;
   margin-bottom: 20px;
+  padding: inherit;
 }
 
 .card-price {
@@ -200,4 +201,33 @@
 
 .icon-txt {
   color: white !important;
+}
+
+.padding-top {
+  padding-top: 3px;
+}
+
+.font-red {
+  color: rgba(238, 46, 46, 0.753);
+}
+
+.itineraries-class {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icons-center {
+  font-size: 3rem !important;
+}
+
+.icons-side {
+  font-size: 2rem !important;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+.padding-bottom-2 {
+  padding-bottom: 2rem;
 }
