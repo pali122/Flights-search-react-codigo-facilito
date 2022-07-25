@@ -1,0 +1,203 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  color: white !important;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.full-width {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.page-transition {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.divider {
+  background-color: #d9e2ee;
+  margin: 20px !important;
+}
+
+.text-flight-card {
+  /* font-family: 'Barlow, san-serif', */
+  white-space: "nowrap";
+  text-overflow: "ellipsis";
+  overflow: "hidden";
+}
+
+.text-flight-card-caption {
+  font-size: 0.875rem !important;
+  color: #ffffff !important;
+}
+
+.name-flight-card {
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.btn-div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.btn-flight {
+  /* border-radius: 20px !important; */
+  padding: 1.125rem 1.5rem !important ;
+  background-color: rgba(10, 255, 255, 0.5) !important;
+  color: white !important;
+  border-color: #becddc !important;
+  font-size: 0.75rem !important;
+}
+
+.card-flight-style {
+  /* background-color: #336a6a; */
+  background: rgba(11, 84, 117, 0.4);
+  backdrop-filter: blur(17.5px);
+  -webkit-backdrop-filter: blur(17.5px);
+  padding: 24px;
+  border-radius: 1rem;
+  margin: 10px;
+}
+
+.card-internal-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse-space {
+  margin-right: 1rem;
+}
+
+.flight-table {
+  max-height: 70vh;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  background: rgba(31, 207, 0, 0.4);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border-radius: 1rem; */
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-label {
+}
+
+.graph {
+  width: 80%;
+  display: table;
+  margin: 0 auto 0;
+  position: relative;
+  text-align: center;
+  height: 5rem;
+}
+
+.txt-color {
+  color: white;
+}
+
+.txt-size {
+  font-size: 2rem;
+}
+
+.txt-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.txt-unit-size {
+  font-size: 0.75em;
+  padding-right: 0.5rem;
+}
+
+.price-flex {
+  display: flex;
+}
+
+.padding-data {
+  padding-right: 30px;
+}
+
+.font-class {
+  font-size: small;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-card {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.MuiBadge-root {
+  position: relative !important;
+}
+
+.icon-row {
+  margin-left: 1rem;
+}
+
+.main-icon-center {
+  font-size: 3rem;
+}
+
+.icon-txt {
+  color: white !important;
+}
